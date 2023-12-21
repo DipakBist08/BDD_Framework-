@@ -60,10 +60,10 @@ def VerifyZtoA(context):
 def SelectLowtoHigh(context):
     sort_dropdown = context.driver.find_element(By.XPATH, '//*[@id="header_container"]/div[2]/div/span/select')
     select = Select(sort_dropdown)
-    select.select_by_visible_text('Name (Low to High)')
+    select.select_by_visible_text('Name (low to high)')
 
 
-@then('Verify Products are sorted by Price (Low to High)')
+@then('Verify Products are sorted by Price (low to high)')
 def VerifyLowtoHigh(context):
     sorted_elements = context.driver.find_element(By.XPATH,
                                                   '//*[@id="inventory_container"]/div/div[1]/div[2]/div[2]/div')
