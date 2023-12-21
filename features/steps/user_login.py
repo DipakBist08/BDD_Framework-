@@ -18,3 +18,4 @@ def UserLoginDetails(context, userName, userPass):
 def ProductPage(context):
     product_page = context.driver.find_element(By.XPATH, '//*[@id="header_container"]/div[2]/span').text
     assert product_page == "Products", "You are not in Product Page.|Passed|"
+    time.sleep(5)
