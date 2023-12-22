@@ -27,14 +27,14 @@ def Login(context):
     loginButton.click()
 
 
-@then(u'I am at Product Page')
+@then('I am at Product Page')
 def ProductPage(context):
     page_title = WebDriverWait(context.driver, 10).until(
         EC.visibility_of_element_located((By.XPATH, '//*[@id="header_container"]/div[2]/span')))
     assert page_title.text == 'Products', "You are  on the product page"
 
 
-@then(u'I add an item to the cart')
+@then('I add an item to the cart')
 def CheckCart(context):
     item_to_add = WebDriverWait(context.driver, 10).until(
         EC.element_to_be_clickable((By.XPATH, '//*[@id="add-to-cart-sauce-labs-backpack"]')))
