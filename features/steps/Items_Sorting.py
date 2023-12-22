@@ -27,7 +27,7 @@ def ProductPage(context):
 def SelectAtoZ(context):
     sort_dropdown = context.driver.find_element(By.XPATH, '//*[@id="header_container"]/div[2]/div/span/select')
     select = Select(sort_dropdown)
-    select.select_by_visible_text('Name (A to Z)')
+    select.select_by_value("az")
 
 
 @then('Verify Products are sorted by Name (A to Z)')
@@ -91,4 +91,3 @@ def VerifyHightoLow(context):
 
 
 
-#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
