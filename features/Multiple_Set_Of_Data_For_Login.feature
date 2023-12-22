@@ -1,10 +1,10 @@
-Feature: Provide Set of Data for Login
-  Scenario Outline: Verify that set of login user can able to get login to Swag Lab
+Feature: Scenario Outline
+Scenario Outline: Verify that set of login user can able to get login to Swag Lab
     Given I Launch Chrome Browser
     When I Open Swag Lab Login Page
     And Enter userName "<userName>" and password "<password>"
-    And Click on Login Button
-    Then User Can Login with valid credentials
+    And I Click on Login Button
+    Then User Must Successfully get login with valid credentials
     Examples:
       |userName               | password   |
       |standard_user          |secret_sauce|
